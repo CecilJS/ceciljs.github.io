@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/ceciljs/static/css/main.ab666ed5.chunk.css",
+    "main.js": "/ceciljs/static/js/main.e750b773.chunk.js",
+    "main.js.map": "/ceciljs/static/js/main.e750b773.chunk.js.map",
+    "runtime-main.js": "/ceciljs/static/js/runtime-main.4f1654a2.js",
+    "runtime-main.js.map": "/ceciljs/static/js/runtime-main.4f1654a2.js.map",
+    "static/css/2.11829350.chunk.css": "/ceciljs/static/css/2.11829350.chunk.css",
+    "static/js/2.f169ed85.chunk.js": "/ceciljs/static/js/2.f169ed85.chunk.js",
+    "static/js/2.f169ed85.chunk.js.map": "/ceciljs/static/js/2.f169ed85.chunk.js.map",
+    "index.html": "/ceciljs/index.html",
+    "precache-manifest.91c23641365564937e684478955d0b34.js": "/ceciljs/precache-manifest.91c23641365564937e684478955d0b34.js",
+    "service-worker.js": "/ceciljs/service-worker.js",
+    "static/css/2.11829350.chunk.css.map": "/ceciljs/static/css/2.11829350.chunk.css.map",
+    "static/css/main.ab666ed5.chunk.css.map": "/ceciljs/static/css/main.ab666ed5.chunk.css.map",
+    "static/js/2.f169ed85.chunk.js.LICENSE.txt": "/ceciljs/static/js/2.f169ed85.chunk.js.LICENSE.txt",
+    "static/media/landing.css": "/ceciljs/static/media/cecil.ea603354.jpg",
+    "static/media/myAvatar.jpg": "/ceciljs/static/media/myAvatar.0f387d2b.jpg",
+    "static/media/projects.css": "/ceciljs/static/media/time.c92ab423.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4f1654a2.js",
+    "static/css/2.11829350.chunk.css",
+    "static/js/2.f169ed85.chunk.js",
+    "static/css/main.ab666ed5.chunk.css",
+    "static/js/main.e750b773.chunk.js"
+  ]
+}
