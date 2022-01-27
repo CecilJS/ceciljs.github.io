@@ -20,6 +20,8 @@ import MailIcon from "@mui/icons-material/Mail";
 import MaterialUISwitch from "../components/MaterialUISwitch";
 import {  FormControlLabel, Grid } from "@mui/material";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 const drawerWidth = 240;
 
@@ -60,10 +62,10 @@ const AppBar = styled(MuiAppBar, {
 }));
 
 const primaryLink = [
-  { title: "home", path: "/catalog" },
+  { title: "home", path: "/home" },
   { title: "about", path: "/about" },
   { title: "contact", path: "/contact" },
-  { title: "Projects", path: "/login" },
+  { title: "Projects", path: "/projects" },
 ];
 
 
@@ -118,7 +120,7 @@ export default function Navbar(props) {
               <MenuIcon />
             </IconButton>
             <Grid container>
-            <Typography variant="h6" noWrap component="div">
+            <Typography variant="h6" noWrap to="/" component={Link} sx={{textDecoration: "none", color: 'inherit'}}>
               Cecil
             </Typography>
             </Grid>
@@ -128,6 +130,8 @@ export default function Navbar(props) {
                 <ListItem
                   key={path}
                   sx={{ color: "inherit", typography: "h7" }}
+                  to={path}
+                  component={Link}
                 >
                   {title.charAt(0).toUpperCase() + title.slice(1)}
                 </ListItem>

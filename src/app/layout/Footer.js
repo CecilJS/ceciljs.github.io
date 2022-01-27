@@ -12,8 +12,8 @@ import ListItem from "@mui/material/ListItem";
 function Footer () {
 
         const footerLinks = [
-                { title: "Terms", path: "/catalog" },
-                { title: "Privacy Policy", path: "/about" }
+                { title: "Terms", path: "/terms" },
+                { title: "Privacy Policy", path: "/privacy" }
 
               ];
  
@@ -28,8 +28,8 @@ function Footer () {
                   <Grid item xs={12} sm={12} md={6} lg={6} xl={6} sx={{ mt: 15}}>
                   
                   <List  sx={{ display: "flex" }}>
-                        {footerLinks.map(link => (
-                                <ListItem>{link.title}</ListItem>
+                        {footerLinks.map((link, i) => (
+                                <ListItem key={i}>{link.title}</ListItem>
                         ))}
                   </List>
                   </Grid>
