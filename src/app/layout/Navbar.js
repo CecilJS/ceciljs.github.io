@@ -62,9 +62,9 @@ const AppBar = styled(MuiAppBar, {
 }));
 
 const primaryLink = [
-  { title: "home", path: "/home" },
-  { title: "about", path: "/about" },
-  { title: "contact", path: "/contact" },
+  { title: "Home", path: "/home" },
+  { title: "About", path: "/about" },
+  { title: "Contact", path: "/contact" },
   { title: "Projects", path: "/projects" },
 ];
 
@@ -173,12 +173,12 @@ export default function Navbar(props) {
         </DrawerHeader>
         <Divider />
         <List>
-          {["Home", "About", "Contact", "Projects"].map((text, index) => (
-            <ListItem button key={text}>
+          {primaryLink.map((path, index) => (
+            <ListItem button key={index} to={path.path} component={Link} >
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary={path.title} />
             </ListItem>
           ))}
         </List>

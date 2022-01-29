@@ -5,7 +5,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-
+import { Link } from "react-router-dom";
 
 
 
@@ -27,10 +27,16 @@ function Footer () {
                   </Grid>
                   <Grid item xs={12} sm={12} md={6} lg={6} xl={6} sx={{ mt: 15}}>
                   
-                  <List  sx={{ display: "flex" }}>
+                  <List  sx={{ display: "flex"}}>
                         {footerLinks.map((link, i) => (
-                                <ListItem key={i}>{link.title}</ListItem>
-                        ))}
+                                <ListItem key={i} 
+                                to={link.path}
+                                component={Link}
+                                sx={{ display: "flex", textDecoration: "none", color: 'inherit'}}
+                                >
+                                {link.title}
+                                </ListItem>
+                                ))}
                   </List>
                   </Grid>
                 </Grid>

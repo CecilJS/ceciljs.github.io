@@ -1,14 +1,18 @@
 import React from 'react';
-import { Typography } from "@mui/material";
+import { Typography, Table, TableRow, TableBody, TableContainer, TableHead, TableCell } from "@mui/material";
 import Grid from '@mui/material/Grid';
-import ceciljs from '../images/ceciljs-avatar.png';
 import Button from '@mui/material/Button';
-import Avatar from '@mui/material/Avatar';
 import { Link } from "react-router-dom";
+import { useSpring, animated } from 'react-spring';
+
+
+  
 
 function About(){
-
+    const props = useSpring({ to: { opacity: 1 }, from: { opacity: 0 }, delay: 500 });
+    
     return(
+        <animated.main style={props}>
         <Grid container>
         <Grid item xs={12} sm={12} md={6} lg={6} xl={6} >
             <Typography variant='h2' sx={{ml: 10, mr: 10, mt: 1}}>
@@ -39,17 +43,62 @@ function About(){
              </Typography>
                 <Button variant="contained" to="/projects" component={Link} sx={{ ml: 10, mr: 10, mt: 3, fontWeight: 'bold', bgcolor: "#003333"}}>Projects</Button>
                 </Grid>
-                <Grid item xs={12} sm={12} md={6} lg={6} xl={6} sx={{ mt: 30}}>
-                <Avatar 
-                    src={ceciljs}
-                    alt="cecil"
-                    sx={{ width: 400, height: 400, ml: 60 }}
+                <Grid item xs={12} sm={12} md={6} lg={6} xl={6} sx={{ mt: 15}}>
+                <TableContainer>
+                    <Table>
+                        <TableHead>
+                            <TableRow>
+                                <TableCell>
+                                    <Typography variant='h6' sx={{ ml: 10, mr: 10, mt: 2}} >
+                                    Programming Languages
+                                    </Typography>
+                                </TableCell>
+                                <TableCell>
+                                    <Typography variant='h6' sx={{ ml: 10, mr: 10, mt: 2}} >
+                                        Frameworks
+                                    </Typography>
+                                </TableCell>
+                            </TableRow>
+                        </TableHead>
+                    <TableBody>
+                    <TableRow>
+                    <TableCell>
+                        <Typography variant='h6' sx={{ ml: 10, mr: 10, mt: 2}} >
+                            JavaScript
+                        </Typography>
+                    </TableCell>    
+                    </TableRow>
+                    <TableRow>
+                    <TableCell>
+                        <Typography variant='h6' sx={{ ml: 10, mr: 10, mt: 2}} >
+                            React   |   Redux   |   Node.js
+                        </Typography>
+                    </TableCell>    
+                    </TableRow>
+                    </TableBody>
+                    <TableBody>
+                    <TableRow>
+                    <TableCell>
+                        <Typography variant='h6' sx={{ ml: 10, mr: 10, mt: 2}} >
+                            JavaScript
+                        </Typography>
+                    </TableCell>    
+                    </TableRow>
+                    <TableRow>
+                    <TableCell>
+                        <Typography variant='h6' sx={{ ml: 10, mr: 10, mt: 2}} >
+                            React   |   Redux   |   Node.js
+                        </Typography>
+                    </TableCell>    
+                    </TableRow>
+                    </TableBody>
+                    </Table>
+                </TableContainer>
                 
-                />
-          </Grid>
+                </Grid>
           
         </Grid>
-      
+      </animated.main>
 
     )
 }

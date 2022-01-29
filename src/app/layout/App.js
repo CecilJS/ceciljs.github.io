@@ -7,6 +7,8 @@ import About from "./About";
 import Contact from "./Contact";
 import Projects from "./Projects";
 import { Route, Switch } from "react-router-dom";
+import Privacy from "./Privacy";
+import Terms from "./Terms";
 
 
 
@@ -41,6 +43,10 @@ function App() {
         <Route path="/contact" component={Contact}>
         </Route>
         <Route path="/projects" component={Projects}>
+        </Route>
+        <Route path="/privacy" component={Privacy}>
+        </Route>
+        <Route path="/terms" component={Terms}>
         </Route>
       </Switch>
       <Footer/>
