@@ -1,17 +1,33 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Typography } from "@mui/material";
 import Grid from '@mui/material/Grid';
-import { useSpring, animated } from 'react-spring';
+import { animated, useTransition } from 'react-spring';
 
 
   
 
 function Privacy(){
-    const props = useSpring({ to: { opacity: 1 }, from: { opacity: 0 }, delay: 500 });
+    const [privacyPage, setPrivacyPage] = useState(false);
+    const transition = useTransition(privacyPage, {
+  
+       from: { opacity: 0, transform: 'translate3d(-120px, 0, 0)' },
+       enter: { opacity: 1, transform: 'translate3d(0, 0px, 0)', delay: 500 }
+  
+    });
+  
+    const AnimatedGrid = animated(Grid);
+  
+    useEffect(() => {
+  
+        setPrivacyPage(true);
+  
+    } , [privacyPage]);
+  
 
     return(
-     <animated.main style={props}>
-        <Grid container>
+        <>
+        {transition((style, item) => privacyPage ? (
+        <AnimatedGrid style={style} container>
         <Grid item xs={12} sm={12} md={2} lg={2} xl={2}>
 
         </Grid>
@@ -148,8 +164,8 @@ function Privacy(){
 
                 </Grid>
           
-        </Grid>
-      </animated.main>
+        </AnimatedGrid>) : null)}
+        </>
 
     )
 }
