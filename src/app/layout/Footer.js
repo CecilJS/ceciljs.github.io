@@ -20,12 +20,15 @@ function Footer () {
         return (
             
                 <Grid container>
-                  <Grid item xs={12} sm={12} md={6} lg={6} xl={6} sx={{ mt: 15}}>
+                        <Grid item xs={2} sm={2} md={2} lg={2} xl={2}>
+
+                        </Grid>
+                  <Grid item xs={12} sm={12} md={4} lg={4} xl={4} sx={{ mt: 15}}>
                   <GitHubIcon sx={{ ml: 20}}/>
-                  <LinkedInIcon sx={{ ml: 20}}/>
-                  <TwitterIcon sx={{ ml: 20}}/>
+                  <LinkedInIcon sx={{ ml: 5}}/>
+                  <TwitterIcon sx={{ ml: 5}}/>
                   </Grid>
-                  <Grid item xs={12} sm={12} md={6} lg={6} xl={6} sx={{ mt: 15}}>
+                  <Grid item xs={12} sm={12} md={4} lg={4} xl={4} sx={{ mt: 13}}>
                   
                   <List  sx={{ display: "flex"}}>
                         {footerLinks.map((link, i) => (
@@ -39,6 +42,9 @@ function Footer () {
                                 ))}
                   </List>
                   </Grid>
+                        <Grid item xs={2} sm={2} md={2} lg={2} xl={2}>
+
+                        </Grid>
                 </Grid>
         )
     }

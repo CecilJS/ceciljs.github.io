@@ -1,65 +1,34 @@
-import React from "react";
+import React, {useState, useEffect} from 'react';
 import { styled, useTheme } from "@mui/material/styles";
+import {AppBar} from "../components/AppBar";
+import {Main} from "../components/Main";
+import { drawerWidth } from "../components/Main";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import CssBaseline from "@mui/material/CssBaseline";
-import MuiAppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import List from "@mui/material/List";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
+import HomeIcon from '@mui/icons-material/Home';
+import PersonIcon from '@mui/icons-material/Person';
+import WorkIcon from '@mui/icons-material/Work';
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import MaterialUISwitch from "../components/MaterialUISwitch";
 import {  FormControlLabel, Grid } from "@mui/material";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
-const drawerWidth = 240;
 
-const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
-  ({ theme, open }) => ({
-    flexGrow: 1,
-    padding: theme.spacing(3),
-    transition: theme.transitions.create("margin", {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen
-    }),
-    marginLeft: `-${drawerWidth}px`,
-    ...(open && {
-      transition: theme.transitions.create("margin", {
-        easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen
-      }),
-      marginLeft: 0
-    })
-  })
-);
 
-const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== "open"
-})(({ theme, open }) => ({
-  transition: theme.transitions.create(["margin", "width"], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen
-  }),
-  ...(open && {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: `${drawerWidth}px`,
-    transition: theme.transitions.create(["margin", "width"], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen
-    })
-  })
-}));
+
 
 const primaryLink = [
   { title: "Home", path: "/home" },
@@ -81,6 +50,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 export default function Navbar(props) {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
+  const [innerWidth, setInnerWidth] = useState({ width: window.innerWidth});
 
   // changing the text from dark to light and vice versa
   const [modeLabel, setmodeLabel] = useState(true);
@@ -98,6 +68,17 @@ export default function Navbar(props) {
     setOpen(false);
   };
 
+  // Listening to the window size and changing the state of the navbar
+  useEffect(() => {
+    function handleResize() {
+      setInnerWidth({
+        width: window.innerWidth
+          })   
+       } 
+    window.addEventListener('resize', handleResize);
+    return _ => {window.removeEventListener('resize', handleResize)};
+  })
+
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -109,7 +90,6 @@ export default function Navbar(props) {
       >
       
         <Toolbar>
-       
             <IconButton
               color="inherit"
               aria-label="open drawer"
@@ -125,18 +105,24 @@ export default function Navbar(props) {
             </Typography>
             </Grid>
             <Grid container spacing={0} direction="row" alignItems="center" justifyContent="center">
-            <List sx={{ display: "flex" }}>
+            { // implementing the useEffect hook to hide the navitems on mobile
+              (innerWidth.width < 800) ? null : (
+                <List sx={{ display: "flex" }}>
               {primaryLink.map(({ title, path }) => (
                 <ListItem
                   key={path}
                   sx={{ color: "inherit", typography: "h7" }}
                   to={path}
                   component={Link}
+                  onClick={handleDrawerClose}
                 >
                   {title.charAt(0).toUpperCase() + title.slice(1)}
                 </ListItem>
               ))}
             </List>
+              )  
+            }
+           
         </Grid>
         <Grid container justifyContent="flex-end" >
           <FormControlLabel
@@ -174,9 +160,9 @@ export default function Navbar(props) {
         <Divider />
         <List>
           {primaryLink.map((path, index) => (
-            <ListItem button key={index} to={path.path} component={Link} >
+            <ListItem button key={index} to={path.path} component={Link} onClick={handleDrawerClose} >
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {path.title === "Home" ? <HomeIcon /> : path.title === "About" ? <PersonIcon /> : path.title === "Projects" ? <WorkIcon /> : <MailIcon />}
               </ListItemIcon>
               <ListItemText primary={path.title} />
             </ListItem>

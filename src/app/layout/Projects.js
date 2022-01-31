@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import { Typography } from "@mui/material";
 import Grid from '@mui/material/Grid';
+import { Typography} from "@mui/material";
 import ceciljs from '../images/ceciljs-avatar.png';
 import tendercrown from '../images/tender-crown.png';
 import elegance from '../images/traditionalelegance.png';
-import ProjectDisplayCard from './ProjectDisplayCard';
+import ProjectDisplayCard from '../components/ProjectDisplayCard';
 
 
 //component, height, url, alt, title, description, website, learnMore
@@ -59,30 +59,14 @@ function Projects(){
 
         return(
             <>
-            <Grid container
-            spacing={0}
-            direction="column"
-            alignItems="center"
-            justifyContent="center"
-            >
-                <Grid item xs={12} sm={12} md={6} lg={6} xl={6} >
-                <Typography variant='h2' align="center"  sx={{mb: 2}} >
+            <Typography variant='h2' align="center"  sx={{mb: 5}} >
                 My projects
                 </Typography>
-                </Grid>
-                <Grid item xs={12} sm={12} md={6} lg={6} xl={6} >
-                <Typography variant='h6' align="center" sx={{mb: 5}} >
-                Thanks for deciding to visit my page! <br></br>
-                To check out the code for most of my projects, please check out my github repository.<br></br>
-                While you are here, feel free to check out my some of the projects I am proud of. <br></br>
-                Please drop me a line if you have any questions or comments. 
-                </Typography>
-                </Grid>
-            </Grid>
-            <Grid container
-            direction={'row'} 
-            spacing={24}
-            >  
+            <Grid container spacing={10}> 
+            <Grid item xs={0.5} sm={0.5} md={1} lg={1} xl={2}>
+
+            </Grid> 
+
             {DATA.map((item, index) =>  (
                 <ProjectDisplayCard
                 component={item.component}
@@ -98,6 +82,10 @@ function Projects(){
                 />
 
             ))}  
+
+            <Grid item xs={0.5} sm={0.5} md={1} lg={1} xl={2}>
+
+            </Grid> 
             </Grid>
             </>
 
