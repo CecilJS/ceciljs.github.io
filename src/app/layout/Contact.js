@@ -1,14 +1,33 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Typography } from "@mui/material";
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Link } from "react-router-dom";
+import { animated, useTransition } from 'react-spring';
 
 function Contact(){
 
+   const [contactPage, setContactPage] = useState(false);
+   const transition = useTransition(contactPage, {
+
+      from: { opacity: 0, transform: 'translate3d(-120px, 0, 0)' },
+      enter: { opacity: 1, transform: 'translate3d(0, 0px, 0)', delay: 500 }
+
+  });
+
+  const AnimatedGrid = animated(Grid);
+
+  useEffect(() => {
+
+    setContactPage(true);
+
+} , [contactPage]);
+
+
     return(
-        <Grid container>
+        <>
+      {transition((style, item) => contactPage ? (  <AnimatedGrid style={style} container>
             <Grid item xs={2} sm={2} md={2} lg={2} xl={2}>
                 
             </Grid>
@@ -40,9 +59,9 @@ function Contact(){
                 
                 </Grid>
           
-        </Grid>
+        </AnimatedGrid>) : null)}
       
-
+    </>
     )
 }
 

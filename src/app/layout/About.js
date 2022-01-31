@@ -1,23 +1,39 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Typography } from "@mui/material";
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
-import { useSpring, animated } from 'react-spring';
+import { animated, useTransition } from 'react-spring';
 
 
   
 
 function About(){
-    const props = useSpring({ to: { opacity: 1 }, from: { opacity: 0 }, delay: 500 });
+    const [aboutPage, setAboutPage] = useState(false);
+    const transition = useTransition(aboutPage, {
+ 
+       from: { opacity: 0, transform: 'translate3d(-120px, 0, 0)' },
+       enter: { opacity: 1, transform: 'translate3d(0, 0px, 0)', delay: 500 }
+ 
+   });
+ 
+   const AnimatedGrid = animated(Grid);
+ 
+   useEffect(() => {
+ 
+    setAboutPage(true);
+ 
+ } , [aboutPage]);
+ 
+ 
     
     return(
-        <animated.main style={props}>
-        <Grid container>
-            <Grid item xs={12} sm={12} md={2} lg={2} xl={2}>
+       <>
+        {transition((style, item) => aboutPage ? ( <AnimatedGrid style={style} container>
+            <Grid item xs={2} sm={2} md={2} lg={2} xl={2}>
 
             </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} >
+            <Grid item xs={8} sm={8} md={6} lg={6} xl={6} >
                 <Typography variant='h2'>
                 About me
                 </Typography>
@@ -46,11 +62,11 @@ function About(){
                 </Typography>
                     <Button variant="contained" to="/projects" component={Link} sx={{  mt: 5, fontWeight: 'bold', bgcolor: "#003333"}}>Projects</Button>
             </Grid>          
-            <Grid item xs={12} sm={12} md={2} lg={2} xl={2}>
+            <Grid item xs={2} sm={2} md={2} lg={2} xl={2}>
 
             </Grid>
-        </Grid>
-      </animated.main>
+        </AnimatedGrid>) : null)}
+        </>
 
     )
 }

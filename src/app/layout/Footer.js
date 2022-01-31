@@ -24,7 +24,7 @@ function Footer () {
 
                         </Grid>
                   <Grid item xs={12} sm={12} md={4} lg={4} xl={4} sx={{ mt: 15}}>
-                  <GitHubIcon sx={{ ml: 20}}/>
+                  <GitHubIcon sx={{ ml: 5}}/>
                   <LinkedInIcon sx={{ ml: 5}}/>
                   <TwitterIcon sx={{ ml: 5}}/>
                   </Grid>

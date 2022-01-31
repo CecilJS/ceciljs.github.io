@@ -5,6 +5,7 @@ import ceciljs from '../images/ceciljs-avatar.png';
 import tendercrown from '../images/tender-crown.png';
 import elegance from '../images/traditionalelegance.png';
 import ProjectDisplayCard from '../components/ProjectDisplayCard';
+import Typewriter from 'typewriter-effect';
 
 
 //component, height, url, alt, title, description, website, learnMore
@@ -59,8 +60,18 @@ function Projects(){
 
         return(
             <>
-            <Typography variant='h2' align="center"  sx={{mb: 5}} >
+            <Typography variant='h2' align="center"  sx={{mb: 3}} >
                 My projects
+            </Typography>
+            <Typography variant='body1' align="center"  sx={{mb: 8}} >
+                <Typewriter
+                    options={{
+                        strings: ['Thank you for deciding to checkout my projects.','Here are a few of the projects I have worked on.', 'To see more of my projects, checkout my github page.'],
+                        autoStart: true,
+                        loop: true,
+                    }}
+                    /> 
+                    
                 </Typography>
             <Grid container spacing={10}> 
             <Grid item xs={0.5} sm={0.5} md={1} lg={1} xl={2}>

@@ -9,7 +9,6 @@ import Typewriter from 'typewriter-effect';
 
 export default function Home (){
    const [showImage, setShowImage] = useState(false);
- 
    const transition = useTransition(showImage, {
 
       from: { opacity: 0, transform: 'translate3d(-120px, 0, 0)' },
