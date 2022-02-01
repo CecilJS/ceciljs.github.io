@@ -21,7 +21,7 @@ function ProjectDisplayCard(props){
     return(
         <>
     {transition((style, item) => props.showProjects ? (
-        <AnimatedGrid style={style} item xs={11} sm={11} md={3} lg={3} xl={3} sx={{display: 'flex', justifyContent: 'space-around'}}>
+        <AnimatedGrid style={style} item xs={11} sm={11} md={3} lg={3} xl={3} sx={{display: 'flex', justifyContent: 'space-around', alignItems: 'center', ml: 2}}>
             <Card  sx={{ maxWidth: 345 }}>
             <CardMedia
                 component={props.component}

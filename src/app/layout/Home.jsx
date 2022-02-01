@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { Typography } from "@mui/material";
 import Grid from '@mui/material/Grid';
 import ceciljs from '../images/Ceciljs.png';
+import ceciljssm from '../images/ceciljs-sm.png';
 import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
 import { useSpring, animated, useTransition } from 'react-spring';
@@ -9,6 +10,7 @@ import Typewriter from 'typewriter-effect';
 
 export default function Home (){
    const [showImage, setShowImage] = useState(false);
+   const [innerWidth, setInnerWidth] = useState({ width: window.innerWidth});
    const transition = useTransition(showImage, {
 
       from: { opacity: 0, transform: 'translate3d(-120px, 0, 0)' },
@@ -25,6 +27,17 @@ export default function Home (){
   
   } , [showImage]);
 
+
+   // Listening to the window size and changing the state of the navbar
+   useEffect(() => {
+      function handleResize() {
+        setInnerWidth({
+          width: window.innerWidth
+            })   
+         } 
+      window.addEventListener('resize', handleResize);
+      return _ => {window.removeEventListener('resize', handleResize)};
+    })
 
     return (
     <animated.main style={props}>
@@ -50,10 +63,10 @@ export default function Home (){
       </Typography>
       <Button variant="contained" to="/about"  component={Link} sx={{mt: 5, fontWeight: 'bold', bgcolor: "#003333", }}>Read More</Button>
       </Grid>
-      <Grid item xs={10} sm={10} md={5} lg={5} xl={5} sx={{ mt: 5}}>
+      <Grid item xs={10} sm={10} md={5} lg={5} xl={5} sx={{ml: 5, mt: 5}}>
       {transition((style, item) => showImage ? (
       <animated.img 
-        src={ceciljs}
+        src={innerWidth.width < 800 ? ceciljssm : ceciljs}
         alt="cecil"
         style={style}
        

@@ -63,7 +63,7 @@ function Projects(){
             <Typography variant='h2' align="center"  sx={{mb: 3}} >
                 My projects
             </Typography>
-            <Typography variant='body1' align="center"  sx={{mb: 8}} >
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
                 <Typewriter
                     options={{
                         strings: ['Thank you for deciding to checkout my projects.','Here are a few of the projects I have worked on.', 'To see more of my projects, checkout my github page.'],
@@ -72,8 +72,8 @@ function Projects(){
                     }}
                     /> 
                     
-                </Typography>
-            <Grid container spacing={10}> 
+                </div>
+            <Grid container spacing={10} sx={{ mt: 2 }}> 
             <Grid item xs={0.5} sm={0.5} md={1} lg={1} xl={2}>
 
             </Grid> 
