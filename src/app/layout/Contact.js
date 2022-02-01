@@ -28,10 +28,10 @@ function Contact(){
     return(
         <>
       {transition((style, item) => contactPage ? (  <AnimatedGrid style={style} container>
-            <Grid item xs={2} sm={2} md={2} lg={2} xl={2}>
+            <Grid item xs={1} sm={1} md={2} lg={2} xl={2}>
                 
             </Grid>
-            <Grid item xs={8} sm={8} md={8} lg={6} xl={6} >
+            <Grid item xs={10} sm={10} md={8} lg={6} xl={6} >
                 <Typography variant='h2' sx={{  mt: 1}}>
                 Contact me
                 </Typography>
@@ -55,7 +55,7 @@ function Contact(){
                 </Typography>
                 <Button variant="contained" to="/projects" component={Link} sx={{ mt: 5, mb: 15,  fontWeight: 'bold', bgcolor: "#003333"}}>Projects</Button>
             </Grid>
-                <Grid item xs={2} sm={2} md={2} lg={2} xl={2}>
+                <Grid item xs={1} sm={1} md={2} lg={2} xl={2}>
                 
                 </Grid>
           

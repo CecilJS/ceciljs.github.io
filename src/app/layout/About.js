@@ -43,7 +43,7 @@ function About(){
                 and computer systems. I have a very curious mind by nature, 
                 and this curiosity is what fuels my drive and passion for learning.
                 I am proficient in JavaScript and Python, and I am currently learning to love
-                C# and C++. I am also a team player, and I am always looking to learn new things.
+                C# and Go. I am also a team player, and I am always looking to learn new things.
                 </Typography>
                 <Typography variant='h6' sx={{ mt: 3}}>
                 Right from the start of my journey in the software industry, I 

@@ -45,8 +45,8 @@ export default function Home (){
     <Grid item xs={1} sm={1} md={1} lg={1} xl={1}>
 
    </Grid>
-    <Grid item xs={10} sm={10} md={5} lg={5} xl={5} sx={{ mt: 15}}>
-      <Typography variant='h1'sx={{ mt: 5, fontWeight: 'bold'}}>
+    <Grid item xs={10} sm={10} md={5} lg={5} xl={5} sx={{ mt: 5}}>
+      <Typography variant='h1'sx={{ mt: 2, fontWeight: 'bold'}}>
          Hello there!
       </Typography>
       <Typography variant='h5' sx={{ mt: 5}} >
