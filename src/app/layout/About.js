@@ -30,10 +30,10 @@ function About(){
     return(
        <>
         {transition((style, item) => aboutPage ? ( <AnimatedGrid style={style} container>
-            <Grid item xs={2} sm={2} md={2} lg={2} xl={2}>
+            <Grid item xs={1} sm={1} md={2} lg={2} xl={2}>
 
             </Grid>
-            <Grid item xs={8} sm={8} md={6} lg={6} xl={6} >
+            <Grid item xs={10} sm={10} md={6} lg={6} xl={6} >
                 <Typography variant='h2'>
                 About me
                 </Typography>
@@ -64,7 +64,7 @@ function About(){
                 </Typography>
                     <Button variant="contained" to="/projects" component={Link} sx={{  mt: 5, fontWeight: 'bold', bgcolor: "#003333"}}>Projects</Button>
             </Grid>          
-            <Grid item xs={2} sm={2} md={2} lg={2} xl={2}>
+            <Grid item xs={1} sm={1} md={2} lg={2} xl={2}>
 
             </Grid>
         </AnimatedGrid>) : null)}
