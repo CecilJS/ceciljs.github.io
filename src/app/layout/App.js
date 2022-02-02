@@ -9,6 +9,7 @@ import Projects from "./Projects";
 import { Route, Switch } from "react-router-dom";
 import Privacy from "./Privacy";
 import Terms from "./Terms";
+import CaseStudy from "./CaseStudy";
 
 
 /*
@@ -59,6 +60,8 @@ function App() {
         <Route path="/privacy" component={Privacy}>
         </Route>
         <Route path="/terms" component={Terms}>
+        </Route>
+        <Route path="/casestudy" component={CaseStudy}>
         </Route>
       </Switch>
       <Footer/>

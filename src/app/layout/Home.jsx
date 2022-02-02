@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import { Typography } from "@mui/material";
 import Grid from '@mui/material/Grid';
-import ceciljs from '../images/Ceciljs.png';
-import ceciljssm from '../images/ceciljs-sm.png';
-import Button from '@mui/material/Button';
+import MyButton from '../components/Button';
+import ceciljs from '../images/itscecil.png';
+import ceciljssm from '../images/cecilsm.png';
 import { Link } from "react-router-dom";
 import { useSpring, animated, useTransition } from 'react-spring';
 import Typewriter from 'typewriter-effect';
@@ -41,12 +41,12 @@ export default function Home (){
 
     return (
     <animated.main style={props}>
-    <Grid container>
+    <Grid container sx={{ mb: 5}}>
     <Grid item xs={1} sm={1} md={1} lg={1} xl={1}>
 
    </Grid>
     <Grid item xs={10} sm={10} md={5} lg={5} xl={5} sx={{ mt: 5}}>
-      <Typography variant='h1'sx={{ mt: 2, fontWeight: 'bold'}}>
+      <Typography variant='h1'sx={{ mt: 2, fontWeight: 'bold', color: '#CAA85D'}}>
          Hello there!
       </Typography>
       <Typography variant='h5' sx={{ mt: 5}} >
@@ -58,10 +58,10 @@ export default function Home (){
       }}
       />   
       </Typography>
-      <Typography variant='h5' sx={{mt: 5, fontWeight: 'bold'}} >
+      <Typography variant='h5' sx={{mt: 5, fontWeight: 'bold', color: '#CAA85D'}} >
          Want to know more about me?
       </Typography>
-      <Button variant="contained" to="/about"  component={Link} sx={{mt: 5, fontWeight: 'bold', bgcolor: "#003333", }}>Read More</Button>
+      <MyButton variant="contained" to="/about"  component={Link} name="Read More"/>
       </Grid>
       <Grid item xs={10} sm={10} md={5} lg={5} xl={5} sx={{ml: 5, mt: 5}}>
       {transition((style, item) => showImage ? (

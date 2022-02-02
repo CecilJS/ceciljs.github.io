@@ -25,14 +25,14 @@ function Footer () {
                         </Grid>
                   <Grid item xs={12} sm={12} md={4} lg={4} xl={4} sx={{ mt: 15}}>
                   <a href="https://github.com/CecilJS" target="_blank" rel="noopener noreferrer">
-                  <GitHubIcon sx={{ ml: 5, color: '#003333'}} />
+                  <GitHubIcon sx={{ ml: 5, color: '#CAA85D'}} />
                   </a>
                   <a href="https://www.linkedin.com/in/itscecil/" target="_blank" rel="noopener noreferrer">
-                  <LinkedInIcon sx={{ ml: 5, color: '#003333'}}/>
+                  <LinkedInIcon sx={{ ml: 5, color: '#CAA85D'}}/>
                   </a>
                 
                  <a href="https://twitter.com/cecil_js" target="_blank" rel="noopener noreferrer"> 
-                  <TwitterIcon sx={{ ml: 5, color: '#003333'}}/>
+                  <TwitterIcon sx={{ ml: 5, color: '#CAA85D'}}/>
                  </a>
                   </Grid>
                   <Grid item xs={12} sm={12} md={4} lg={4} xl={4} sx={{ mt: 13}}>

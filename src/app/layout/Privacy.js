@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid';
 import { animated, useTransition } from 'react-spring';
 
 
+
   
 
 function Privacy(){

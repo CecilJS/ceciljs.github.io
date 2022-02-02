@@ -86,7 +86,7 @@ export default function Navbar(props) {
       <AppBar
         position="fixed"
         open={open}
-        sx={{ flexGrow: 1, bgcolor: "#003333", textDecoration: "none" }}
+        sx={{ flexGrow: 1, bgcolor: "#CAA85D", textDecoration: "none" }}
       >
       
         <Toolbar>

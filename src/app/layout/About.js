@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Typography } from "@mui/material";
 import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
+import MyButton from '../components/Button';
 import { Link } from "react-router-dom";
 import { animated, useTransition } from 'react-spring';
 
@@ -34,7 +34,7 @@ function About(){
 
             </Grid>
             <Grid item xs={10} sm={10} md={6} lg={6} xl={6} >
-                <Typography variant='h2'>
+                <Typography variant='h2' color='#CAA85D'>
                 About me
                 </Typography>
                 <Typography variant='h6'  sx={{ mt: 3}} >
@@ -59,10 +59,10 @@ function About(){
                 writing code, I am usually reading, playing basketball, or doing some
                 charitable activity.
                 </Typography>
-                <Typography variant='h5' sx={{ mt: 3, fontWeight: 'bold'}} >
+                <Typography variant='h5' sx={{ mt: 3, color:'#CAA85D', fontWeight: 'bold'}} >
                         Would you like to see some of my projects?
                 </Typography>
-                    <Button variant="contained" to="/projects" component={Link} sx={{  mt: 5, fontWeight: 'bold', bgcolor: "#003333"}}>Projects</Button>
+                <MyButton variant="contained" to="/projects"  component={Link} name="Projects"/>
             </Grid>          
             <Grid item xs={1} sm={1} md={2} lg={2} xl={2}>
 
