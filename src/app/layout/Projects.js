@@ -115,9 +115,7 @@ function Projects(){
                     
                 </div>
             <Grid container spacing={10} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', mt: 2}}> 
-            <Grid item xs={0.5} sm={0.5} md={0} lg={1} xl={1}>
-
-            </Grid> 
+         
 
             {DATA.map((item, index) =>  (
                 <ProjectDisplayCard
@@ -135,9 +133,7 @@ function Projects(){
 
             ))}  
 
-            <Grid item xs={0.5} sm={0.5} md={0} lg={1} xl={1}>
 
-            </Grid> 
             </Grid>
             </>
 

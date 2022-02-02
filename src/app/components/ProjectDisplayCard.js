@@ -1,17 +1,6 @@
 import { Typography, Grid, Card, CardMedia, CardContent, CardActions, Button } from "@mui/material";
 import { useTransition, animated } from 'react-spring';
-import { makeStyles } from '@mui/styles';
 
-const useStyles =  makeStyles({
-
-    root: {
-        
-       
-        "&:nth-child(5)": {
-            marginLeft: 'auto'
-          },
-    }
-});
 
 /**
  *  component, height, url, alt, title, description, website, learnMore
@@ -29,12 +18,12 @@ function ProjectDisplayCard(props){
     });
 
     const AnimatedGrid = animated(Grid);
-      const classes = useStyles();
+    
 
     return(
         <>
     {transition((style, item) => props.showProjects ? (
-        <AnimatedGrid style={style} className={classes.root} item xs={11} sm={11} md={12} lg={3} xl={3} sx={{display: 'flex', justifyContent: 'space-around', alignItems: 'center'}}>
+        <AnimatedGrid style={style} item xs={11} sm={11} md={12} lg={3.5} xl={3.5} sx={{display: 'flex', justifyContent: 'space-around'}}>
             <Card  sx={{ maxWidth: 345 }} >
             <CardMedia
                 component={props.component}
