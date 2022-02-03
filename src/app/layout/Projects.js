@@ -9,6 +9,7 @@ import tendercrown from '../images/tendercrownpage.png';
 import elegance from '../images/traditionalelegance.png';
 import ProjectDisplayCard from '../components/ProjectDisplayCard';
 import Typewriter from 'typewriter-effect';
+import { Link } from "react-router-dom";
 
 
 
@@ -19,69 +20,81 @@ import Typewriter from 'typewriter-effect';
 
 const DATA = [
     {
-        component: "img",
+        component: Link,
         height: "240",
         url: elegance,
         alt: "Traditional Elegance",
         title: "Traditional Elegance",
         description: "Traditional Elegance is a British brand specialising in Handmade tailoring and accessories for men. The brand provides the assurance of quality, merit and modernism.",
         website: "Website",
-        learnMore: "Case Study"
+        learnMore: "Case Study",
+        site: "https://traditionalelegance.co.uk/",
+        to: "/casestudy"
 
     },
     {
-        component: "img",
+        component: Link,
         height: "240",
         url: kidzapp,
         alt: "Kidz App",
         title: "Kidz App",
         description: "Kidz App is a ficticious organisation that produces computing products for children between the ages of 7 - 15. This web application gives its internal users the ability to record customer enquiries. ",
         website: "Website",
-        learnMore: "Case Study"
+        learnMore: "Case Study",
+        site: "https://github.com/CecilJS/Kidzapp",
+        to: "/casestudy"
         
     },
     {
-        component: "img",
+        component: Link,
         height: "240",
         url: tendercrown,
         alt: "tendercrown",
         title: "Tender Crown",
         description: "Tender Crown is a full service salon situated in the Reading Area. Their approach to haircare stands apart from all the salons in the Reading area and beyond.",
         website: "Website",
-        learnMore: "Case Study"
+        learnMore: "Case Study",
+        site: "https://tendercrown.co.uk/",
+        to: "/casestudy"
         
     },
     {
-        component: "img",
+        component: Link,
         height: "240",
         url: thetalkative,
         alt: "The Talkative",
         title: "The Talkative",
         description: "The Talkative was established in 2017 as a virtual hub where Software developers, UX designers and Graphic designers collaborate on projects. This is a startup that I co-founded.",
         website: "Website",
-        learnMore: "Case Study"
+        learnMore: "Case Study",
+        site: "https://thetalkative.uk/",
+        to: "/casestudy"
  
     },
     {
-        component: "img",
+        component: Link,
         height: "240",
         url: jaydalinroyal,
         alt: "Jaydalin Royal",
         title: "Jaydalin Royal",
         description: "Jaydalin Royal Limited is a Logistics company that provides expert services in the import and export industry in Ghana. They hired me to develop a website for their business, which I delivered on time.",
         website: "Website",
-        learnMore: "Case Study"
+        learnMore: "Case Study",
+        site: "https://jaydalinroyal.com/",
+        to: "/casestudy"
      
     },
     {
-        component: "img",
+        component: Link,
         height: "240",
         url: firststinview,
         alt: "1st In View",
         title: "1st In View",
         description: "1st In View Systems was established in 1997, specialises in Intruder Alarms, Access control, CCTV and Door Entry Systems. They hired me to develop a website for their business, which I delivered on time. ",
         website: "Website",
-        learnMore: "Case Study"
+        learnMore: "Case Study",
+        site: "https://www.1stinview.com/",
+        to: "/casestudy"
     
         
     }
@@ -120,19 +133,20 @@ function Projects(){
             {DATA.map((item, index) =>  (
                 <ProjectDisplayCard
                 component={item.component}
+                to={item.to}
                 height={item.height}
                 url={item.url}
                 alt={item.alt}
                 title={item.title}
                 description={item.description}
                 website={item.website}
+                site={item.site}
                 learnMore={item.learnMore}
                 key={index}
                 showProjects={showProjects}
                 />
 
-            ))}  
-
+              ))}  
 
             </Grid>
             </>

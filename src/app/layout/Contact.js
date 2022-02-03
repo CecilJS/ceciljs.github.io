@@ -35,7 +35,7 @@ function Contact(){
                 <Typography variant='h2' sx={{ color:'#CAA85D',  mt: 1}}>
                 Contact me
                 </Typography>
-                <Typography variant='h6' align="justify" sx={{ mt: 3}} >
+                <Typography variant='h6' sx={{ mt: 3}} >
                 Hey there! Would you like to get in touch?
                 I would really love to hear from you. 
                 To help me stay organised and productive while 

@@ -26,7 +26,7 @@ function ProjectDisplayCard(props){
         <AnimatedGrid style={style} item xs={11} sm={11} md={12} lg={3.5} xl={3.5} sx={{display: 'flex', justifyContent: 'space-around'}}>
             <Card  sx={{ maxWidth: 345 }} >
             <CardMedia
-                component={props.component}
+                component="img"
                 height={props.height}
                 image={props.url}
                 alt={props.alt}
@@ -40,8 +40,8 @@ function ProjectDisplayCard(props){
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small" sx={{color: "#003333", fontWeight: "bold"}} >{props.website}</Button>
-                <Button size="small" sx={{color: "#003333", fontWeight: "bold"}} >{props.learnMore}</Button>
+            <a href={props.site} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none'}}> <Button size="small" sx={{color: "#CAA85D", fontWeight: "bold"}}>{props.website}</Button></a>
+                <Button size="small" sx={{color: "#CAA85D", fontWeight: "bold"}} to={props.to} component={props.component} >{props.learnMore}</Button>
             </CardActions>
             </Card>
         </AnimatedGrid>
