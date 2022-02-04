@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid';
 import MyButton from '../components/Button';
 import { Link } from "react-router-dom";
 import { animated, useTransition } from 'react-spring';
+import MyAvatar from '../components/MyAvatar';
 
 
   
@@ -29,7 +30,7 @@ function About(){
     
     return(
        <>
-        {transition((style, item) => aboutPage ? ( <AnimatedGrid style={style} container>
+        {transition((style, item) => aboutPage ? ( <AnimatedGrid style={style} container sx={{flexWrap: 'wrap'}}>
             <Grid item xs={1} sm={1} md={2} lg={2} xl={2}>
 
             </Grid>
@@ -37,6 +38,7 @@ function About(){
                 <Typography variant='h2' color='#CAA85D'>
                 About me
                 </Typography>
+                
                 <Typography variant='h6'  sx={{ mt: 3}} >
                 Hey there! My name is Cecil, and I am a software engineer
                 with a keen interest in the intricate details of software 
@@ -64,8 +66,8 @@ function About(){
                 </Typography>
                 <MyButton variant="contained" to="/projects"  component={Link} name="Projects"/>
             </Grid>          
-            <Grid item xs={1} sm={1} md={2} lg={2} xl={2}>
-
+            <Grid item xs={10} sm={10} md={2} lg={2} xl={2} sx={{ ml: 5, mt: 5}}>
+            <MyAvatar/>
             </Grid>
         </AnimatedGrid>) : null)}
         </>
