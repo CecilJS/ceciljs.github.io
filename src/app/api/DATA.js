@@ -13,8 +13,9 @@ export const CASESTUDYDATA = [
         name: "Tender Crown",
         sector: "Hair Salon",
         
-        thechallenge: "Since their inception in 2017, Tender Crown that in order to thrive, they needed a strong digital presence. This digital transformation involved developing their entire brands identity, a complete re-design of their social media presence, and a complete design and development of an salon booking web application. The challenge was to create a strong digital presence that could help them in their digital transformation.",
-        thesolution: "Together with a team of UX and Graphic designers, I led the team that was working on Tender Crown's digital transformation and created a new identity for their salon. We also established Tender Crown's social media presence which enabled them to reach their target audience and keep them engaged. An easy to use booking system was also developed for and configured for Tender Crown which continues to be used till this day.",
+        thechallenge: "Since their inception in 2017, Tender Crown knew that in order to thrive, they needed a strong digital presence. Therefore, they reached out for help. Since they did not already have a digital presence, this project involved developing their entire brands identity, establishing their social media presence, and a complete design and development of a salon booking web application. The challenge was to create a strong digital presence that could help them in their digital transformation.",
+
+        thesolution: "Together with a team of UX and Graphic designers, I led Tender Crown's project and coordinated the creation of a brand identity for their salon. We also established Tender Crown's social media presence which enabled them to reach their target audience and keep them engaged. An easy to use booking system was also developed for and configured for Tender Crown which continues to be used till this day.",
         
         theresults: "The results have been outstanding. Tender Crown has a strong online presence and is able to reach their target audience. They are also able to keep their customers engaged and keep them coming back for more appointments. The salon booking system is also easy to use and easy to maintain. The website is also responsive and can be viewed on any device."
         
@@ -25,10 +26,11 @@ export const CASESTUDYDATA = [
         name: "Traditional Elegance",
         sector: "Fashion Shop",
 
-        thechallenge: "Traditional Elegance is a start-up in the heart of London. They were looking to create a brand that is a reflection of their business and a reflection of their customers. The challenge was to develop an e-commerce store that can help them reach a global audience. This was a challenge that required the development of an application that serve a good user experience and improved customer satisfaction. This was indeed not a easy task.",
-        thesolution: "I led the team that was worked on bringing the business ideas of Traditional Elegance to life. This involved the development of design mock-ups, iterating, and taking ownership of the project from project initiation to deployment.",
+        thechallenge: "Traditional Elegance is a start-up in the heart of London. They were looking to create a brand that is a reflection of their business and a reflection of their customers. The challenge was to develop an e-commerce store that can help them reach a global audience. This was a challenge that required the development of an application that serve a good user experience and improved customer satisfaction. This was no easy task.",
 
-        theresults: "Although still growing as a business, the e-commerce store has been successful. The application is now available on the web and is easy to use. The application is also user friendly, responsive and has led to great customer satisfaction."
+        thesolution: "I led the team that was worked on bringing the business ideas of Traditional Elegance to life. This involved the development of design mock-ups, iterating over design ideas, and taking ownership of the project from the project's initiation through to deployment.",
+
+        theresults: "Although still growing as a business, the e-commerce store has been successful. The application is now available on the web and is very easy to use. Traditional Elegance has been able to reach a wider audience as result of the e-commerce store which was developed for them."
         
 
     },
@@ -37,10 +39,10 @@ export const CASESTUDYDATA = [
         name: "The Talkative",
         sector: "Software Agency",
 
-        thechallenge: "The Talkative is a UK based software agency. This is a start-up that I co-founded with a very good friend of mine who is a concept Illustrator and UX designer. The challenge was to create a brand that was to create a web application that reflected our personality as a brand as well as to showcase our creativity.",
-        thesolution: " As the lead developer, I was responsible for the development of the web application. I converted the design mock-ups into a web application that could be used by the clients. The entire application was built using React on the front-end and then with node and express as the backend.",
+        thechallenge: "The Talkative is a UK based software agency. This is a start-up that I co-founded with a very good friend of mine who is a concept Illustrator and UX designer. The challenge was to create a brand that reflected our personality as a brand as well as to showcase our creativity.",
+        thesolution: " As the lead developer, I was responsible for the development of the web application. I converted the design mock-ups into a web application that could be used by our clients. The entire application was built using React on the front-end and with node and express as the backend.",
 
-        theresults: "The web application gained a lot of traction and was able to reach a global audience. As a start-up, we established a strong brand identity and a strong brand image. Many do comment that the web application is a great way to showcase our creativity and personality."
+        theresults: "The web application gained a lot of traction and as a result, we were able to reach a wider clientele. As a start-up, we established a strong brand identity and a strong brand image. We received a lot of positive comments about our web application being a great way to showcase our creativity and personality."
       
 
     },
@@ -49,11 +51,11 @@ export const CASESTUDYDATA = [
         pictureUrl: kidzapp,
         name: "Kidz App",
         sector: "Computer Technology Store",
-        thechallenge: "Kidz App is a computer technology store that sells a wide range of computer components and accessories for children between the ages of 7 - 15. This web application is in fact a solution to my 2nd year project as part of my web based development module. The challenge was to create a web-based solution which includes the ability to record customer enquiries and online orders that are placed through the website and you are asked to include a backend database to interact with the website. The web-based solution needs to integrate multimedia techniques, web services and e-marketing techniques.",
+        thechallenge: "Kidz App is a computer technology store that sells a wide range of computer components and accessories for children between the ages of 7 - 15. This web application is in fact a solution to my 2nd year project as part of my web based development module. The challenge was to create a web-based solution which includes the ability to record customer enquiries and online orders that are placed through the e-commerce store. The web-based solution also needed to integrate multimedia techniques, web services and e-marketing techniques.",
 
-        thesolution: "I developed Kidz App, a e-commerce store which includes the ability to record customer enquiries and online orders. The front end of this application was built with React and Redux, and the backend was built with .NET. I built a custom API which contained my product details which I called from the front end using Axios. ",
+        thesolution: "I developed Kidz App, a e-commerce store which includes the ability to record customer enquiries and online orders. The front end of this application was built with React and Redux, and the backend was built with .NET. I built a custom API which contained my product details which I called from the front end using Axios. This is a project that I am really proud of.",
 
-        theresults: "The web-based solution met all the requirements of the project and as a result I secured a pass on that module."
+        theresults: "The web-based solution met all the assessment criteria of the project and as a result, I secured a pass on that module."
        
 
     },
@@ -61,11 +63,11 @@ export const CASESTUDYDATA = [
         pictureUrl: jaydalinroyal,
         name: "Jaydalin Royal Limited",
         sector: "Logistics Company",
-        thechallenge: "Jaydalin Royal is a logistics company all the way in West Africa, Ghana with a focus on shipping and receiving goods. The challenge was to create a brand that was to create a web application that multi-media and the ability to client enquiries. Jaydalin did not have any digital presence and therefore involved a lot of research.",
+        thechallenge: "Jaydalin Royal is a logistics company all the way in West Africa, Ghana with a focus on import and export of goods. The challenge was to create a web application that incorporated multi-media and also with the ability to client enquiries. Jaydalin Royal Limited did not have any digital presence and therefore involved a lot of research.",
 
-        thesolution: "I led the project from the initial stages of the application's development lifecycle through to deployment. I converted the design mock-ups into a web application that could be used by the clients.",
+        thesolution: "I led the project from the initial stages of the application's development lifecycle through to deployment. I converted the design mock-ups into a web application that could be used by both existing and potential clients from all around the world.",
 
-        theresults: "A strong brand identity was created and the web application has enabled Jaydalin Royal to reach a global audience. Many comments have been received by the Jaydalin Royal regarding the web application's design. The web application is also user friendly, responsive and has led to great customer satisfaction."
+        theresults: "As a result of this project that I led, a strong brand identity was created for Jaydalin Royal Limited. Additionally, the web application has enabled Jaydalin Royal Limited to reach a global audience with the potential of increasing their bottom line. Many comments have been received by the Jaydalin Royal Limited regarding the web application's design. The web application is also user friendly, responsive and has led to great customer satisfaction."
      
 
     },
@@ -76,9 +78,9 @@ export const CASESTUDYDATA = [
         sector: "Security Systems Provider",
         thechallenge: "1st In View Systems is a security systems provider in the UK. This company already had a digital presence but needed a redesign of their website to ensure that the company's website aligns with modern trends and industry standards. The challenge was develop a simple single-paged website that is fast and user friendly with the ability to manage client enquiries. The website also needed to integrate multimedia techniques and e-marketing techniques.",
 
-        thesolution: "This is exactly what I did for 1st In View. I led the project from the initial stages of the website's development lifecycle through to deployment. Alongside other designers, I converted the design mock-ups into a the desired website which met the needs of 1st In View.",
+        thesolution: "This is exactly what I did for 1st In View. I led the project from the initial stages of the website's development lifecycle through to deployment. Alongside other designers, I converted the design mock-ups into the desired website which met the needs of 1st In View.",
 
-        theresults: " The website met the needs 1st In View Systems and as a result, a lasting business relationship was created. The website is also user friendly, responsive and has led to great customer satisfaction."
+        theresults: "The website met the needs 1st In View Systems and as a result, a lasting business relationship was created. The website is also user friendly, responsive and has led to great customer satisfaction."
       
 
     }
