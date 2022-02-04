@@ -33,10 +33,10 @@ function Contact(){
                 
             </Grid>
             <Grid item xs={10} sm={10} md={8} lg={6} xl={6} >
-                <Typography variant='h2' sx={{ color:'#CAA85D',  mt: 1}}>
+                <Typography variant='h2' sx={{letterSpacing: 1, lineHeight: 1.5, color:'#CAA85D',  mt: 1}}>
                 Contact me
                 </Typography>
-                <Typography variant='h6' sx={{ mt: 3}} >
+                <Typography variant='body1' sx={{letterSpacing: 1, lineHeight: 1.5, mt: 3}} >
                 Hey there! Would you like to get in touch?
                 I would really love to hear from you. 
                 To help me stay organised and productive while 
@@ -44,7 +44,7 @@ function Contact(){
                 I have put together a brief outline of the 
                 different mediums you could use when reaching out to me.
                 </Typography>
-                <Typography variant='h6' sx={{ mt: 3}} >
+                <Typography variant='body1' sx={{letterSpacing: 1, lineHeight: 1.5, mt: 3}} >
                     If you are a recruiter, employer, or a friend, the best way to reach me is via LinkedIn.
                     Please feel free to reach out to me via LinkedIn using the button below. 
                 </Typography> 

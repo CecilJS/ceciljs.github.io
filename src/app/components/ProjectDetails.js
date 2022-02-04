@@ -34,33 +34,26 @@ function ProjectDetails(props){
                  <img src={props.pictureUrl} alt={props.name} style={{width: '100%'}}/>
             </Grid>
             <Grid item xs={10} sm={10} md={4} lg={4} sx={{ml:5}}>
-                 <Typography variant="h3">{props.name}</Typography>
-                 <Divider sx={{mb: 2}}/>
-                 <Typography variant="h5" color='secondary'>{props.role}</Typography>
-                 <Divider sx={{mb: 2}}/>
+                 <Typography variant="h3" color= '#CAA85D'>{props.name}</Typography>
+                 
+                 <Typography variant="subtitle" sx={{color: '#CAA85D'}}>{props.sector}</Typography>
+                 <Divider sx={{mb: 2, mt: 2}}/>
                  
                  <TableContainer>
                      <Table>
                          <TableBody>
+
                              <TableRow>
-                                 <TableCell>Name</TableCell>
-                                 <TableCell>{props.name}</TableCell>
+                                 <TableCell sx={{fontWeight: 'bold', color: '#CAA85D'}}>The Challenge</TableCell>
+                                 <TableCell sx={{letterSpacing: 1, lineHeight: 1.5}}>{props.thechallenge}</TableCell>
                              </TableRow>
                              <TableRow>
-                                 <TableCell>Description</TableCell>
-                                 <TableCell>{props.description}</TableCell>
+                                 <TableCell sx={{fontWeight: 'bold', color: '#CAA85D'}}>The Solution</TableCell>
+                                 <TableCell sx={{letterSpacing: 1, lineHeight: 1.5}}>{props.thesolution}</TableCell>
                              </TableRow>
                              <TableRow>
-                                 <TableCell>Type</TableCell>
-                                 <TableCell>{props.type}</TableCell>
-                             </TableRow>
-                             <TableRow>
-                                 <TableCell>Brand</TableCell>
-                                 <TableCell>{props.brand}</TableCell>
-                             </TableRow>
-                             <TableRow>
-                                 <TableCell>Deliverables</TableCell>
-                                 <TableCell>{props.deliverables}</TableCell>
+                                 <TableCell sx={{fontWeight: 'bold', color: '#CAA85D'}}>The Results</TableCell>
+                                 <TableCell sx={{letterSpacing: 1, lineHeight: 1.5}}>{props.theresults}</TableCell>
                              </TableRow>
                          </TableBody>
                      </Table>

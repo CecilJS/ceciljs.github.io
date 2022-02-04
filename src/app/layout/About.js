@@ -35,11 +35,11 @@ function About(){
 
             </Grid>
             <Grid item xs={10} sm={10} md={6} lg={6} xl={6} >
-                <Typography variant='h2' color='#CAA85D'>
+                <Typography variant='h2' sx={{letterSpacing: 1, lineHeight: 1.5, color:'#CAA85D'}}>
                 About me
                 </Typography>
                 
-                <Typography variant='h6'  sx={{ mt: 3}} >
+                <Typography variant='body1'  sx={{letterSpacing: 1, lineHeight: 1.5, mt: 3}} >
                 Hey there! My name is Cecil, and I am a software engineer
                 with a keen interest in the intricate details of software 
                 and computer systems. I have a very curious mind by nature, 
@@ -47,7 +47,7 @@ function About(){
                 I am proficient in JavaScript and Python, and I am currently learning to love
                 C# and Go. I am also a team player, and I am always looking to learn new things.
                 </Typography>
-                <Typography variant='h6' sx={{ mt: 3}}>
+                <Typography variant='body1' sx={{letterSpacing: 1, lineHeight: 1.5, mt: 5}}>
                 Right from the start of my journey in the software industry, I 
                 created a professional development plan for myself and have stuck to it till this day. 
                 Although my path has not neccessarily been the most direct, I have learned a lot along
@@ -55,7 +55,7 @@ function About(){
                 and these qualities really helps when debugging and troubleshooting.
                 </Typography> 
                 
-                <Typography variant='h6' sx={{ mt: 3}}>
+                <Typography variant='body1' sx={{letterSpacing: 1, lineHeight: 1.5, mt: 3}}>
                 In everything I do, I like to take a scientific approach to it as 
                 I believe that is an effective way to learn anything. When I am not
                 writing code, I am usually reading, playing basketball, or doing some

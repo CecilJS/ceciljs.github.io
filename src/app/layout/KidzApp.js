@@ -1,5 +1,5 @@
 import ProjectDetails from "../components/ProjectDetails"
-import { Typography} from "@mui/material";
+import CaseStudyTitle from "../components/CaseStudyTitle";
 import {CASESTUDYDATA} from "../api/DATA"
 
 
@@ -11,9 +11,7 @@ function KidzApp(){
 
     return (
        <>
-       <Typography
-       sx={{justifyContent: "center", alignItems: "center", textAlign: "center", fontSize: "2.5rem", fontWeight: "bold", color: "#CAA85D", mt: "2rem"}}
-       >Case Studies</Typography>
+        <CaseStudyTitle/>
         {
             CASESTUDYDATA.map((project,index) => ( 
                 project.name === "Kidz App" ?
@@ -21,11 +19,11 @@ function KidzApp(){
                 key={index}
                 pictureUrl={project.pictureUrl}
                 name={project.name}
-                role={project.role}
-                description={project.description}
-                type={project.type}
-                brand={project.brand}
-                deliverables={project.deliverables}
+                sector={project.sector}
+                thechallenge={project.thechallenge}
+                thesolution={project.thesolution}
+                theresults={project.theresults}
+                satisfaction={project.satisfaction}
                
             />) : null
             )

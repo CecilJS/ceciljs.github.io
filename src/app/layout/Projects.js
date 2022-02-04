@@ -40,7 +40,7 @@ function Projects(props){
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
                 <Typewriter
                     options={{
-                        strings: ['Thank you for deciding to checkout my projects.','Here are a few of the projects I have worked on.', 'To see more of my projects, checkout my github page.'],
+                        strings: ['Thanks for checking out my projects.','Here are a few of the projects I have worked on.', 'Checkout my github page for more.'],
                         autoStart: true,
                         loop: true,
                     }}
