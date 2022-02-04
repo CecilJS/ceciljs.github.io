@@ -1,3 +1,4 @@
+import React from 'react';
 import { Typography, Grid, Card, CardMedia, CardContent, CardActions, Button } from "@mui/material";
 import { useTransition, animated } from 'react-spring';
 
@@ -17,9 +18,10 @@ function ProjectDisplayCard(props){
 
     });
 
+    
     const AnimatedGrid = animated(Grid);
     
-
+    
     return(
         <>
     {transition((style, item) => props.showProjects ? (
@@ -41,7 +43,7 @@ function ProjectDisplayCard(props){
             </CardContent>
             <CardActions>
             <a href={props.site} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none'}}> <Button size="small" sx={{color: "#CAA85D", fontWeight: "bold"}}>{props.website}</Button></a>
-                <Button size="small" sx={{color: "#CAA85D", fontWeight: "bold"}} to={props.to} component={props.component} >{props.learnMore}</Button>
+                <Button size="small" sx={{color: "#CAA85D", fontWeight: "bold"}} to={props.to} component={props.component}>{props.learnMore}</Button>
             </CardActions>
             </Card>
         </AnimatedGrid>

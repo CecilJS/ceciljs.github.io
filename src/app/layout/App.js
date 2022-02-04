@@ -9,7 +9,13 @@ import Projects from "./Projects";
 import { Route, Switch } from "react-router-dom";
 import Privacy from "./Privacy";
 import Terms from "./Terms";
-import CaseStudy from "./CaseStudy";
+import TenderCrown from "./TenderCrown";
+import TheTalkative from "./TheTalkative";
+import FirstInView from "./FirstInView";
+import TraditionalElegance from "./TraditionalElegance";
+import KidzApp from "./KidzApp";
+import JaydalinRoyal from "./JaydalinRoyal";
+
 
 
 /*
@@ -61,7 +67,17 @@ function App() {
         </Route>
         <Route path="/terms" component={Terms}>
         </Route>
-        <Route path="/casestudy" component={CaseStudy}>
+        <Route path="/casestudy/tendercrown" component={TenderCrown}>
+        </Route>
+        <Route path="/casestudy/thetalkative" component={TheTalkative}>
+        </Route>
+        <Route path="/casestudy/firstinview" component={FirstInView}>
+        </Route>
+        <Route path="/casestudy/traditionalelegance" component={TraditionalElegance}>
+        </Route>
+        <Route path="/casestudy/kidzapp" component={KidzApp}>
+        </Route>
+        <Route path="/casestudy/jaydalinroyal" component={JaydalinRoyal}>
         </Route>
       </Switch>
       <Footer/>
