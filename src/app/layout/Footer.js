@@ -18,8 +18,8 @@ function Footer () {
               ];
  
         return (
-            
-                <Grid container>
+           
+                <Grid container sx={{mt: 10}}>
                         <Grid item xs={2} sm={2} md={2} lg={2} xl={2}>
 
                         </Grid>
@@ -42,7 +42,7 @@ function Footer () {
                                 <ListItem key={i} 
                                 to={link.path}
                                 component={Link}
-                                sx={{ display: "flex", textDecoration: "none", color: 'inherit'}}
+                                sx={{ display: "flex", textDecoration: "none", color: '#CAA85D', fontWeight: 'bold'}}
                                 >
                                 {link.title}
                                 </ListItem>
@@ -53,6 +53,7 @@ function Footer () {
 
                         </Grid>
                 </Grid>
+          
         )
     }
 

@@ -26,9 +26,9 @@ export const CASESTUDYDATA = [
         name: "Traditional Elegance",
         sector: "Fashion Shop",
 
-        thechallenge: "Traditional Elegance is a start-up in the heart of London. They were looking to create a brand that is a reflection of their business and a reflection of their customers. The challenge was to develop an e-commerce store that can help them reach a global audience. This was a challenge that required the development of an application that serve a good user experience and improved customer satisfaction. This was no easy task.",
+        thechallenge: "Traditional Elegance is a start-up in the heart of London. They were looking to create a brand that is a reflection of their business and a reflection of their customers. The challenge was to develop an e-commerce store that could help them reach a global audience. This was a challenge that required the development of an application that served a good user experience and improved customer satisfaction. This was no easy task.",
 
-        thesolution: "I led the team that was worked on bringing the business ideas of Traditional Elegance to life. This involved the development of design mock-ups, iterating over design ideas, and taking ownership of the project from the project's initiation through to deployment.",
+        thesolution: "I led the team that worked on bringing the business ideas of Traditional Elegance to life. This involved the development of design mock-ups, iterating over design ideas, and taking ownership of the project from the project's initiation through to deployment.",
 
         theresults: "Although still growing as a business, the e-commerce store has been successful. The application is now available on the web and is very easy to use. Traditional Elegance has been able to reach a wider audience as result of the e-commerce store which was developed for them."
         
@@ -53,9 +53,9 @@ export const CASESTUDYDATA = [
         sector: "Computer Technology Store",
         thechallenge: "Kidz App is a computer technology store that sells a wide range of computer components and accessories for children between the ages of 7 - 15. This web application is in fact a solution to my 2nd year project as part of my web based development module. The challenge was to create a web-based solution which includes the ability to record customer enquiries and online orders that are placed through the e-commerce store. The web-based solution also needed to integrate multimedia techniques, web services and e-marketing techniques.",
 
-        thesolution: "I developed Kidz App, a e-commerce store which includes the ability to record customer enquiries and online orders. The front end of this application was built with React and Redux, and the backend was built with .NET. I built a custom API which contained my product details which I called from the front end using Axios. This is a project that I am really proud of.",
+        thesolution: "I developed Kidz App, an e-commerce store which includes the ability to record customer enquiries and online orders. The front end of this application was built with React and Redux, and the backend was built with .NET. I built a custom API which contained my product details which I called from the front end using Axios. This is a project that I am really proud of.",
 
-        theresults: "The web-based solution met all the assessment criteria of the project and as a result, I secured a pass on that module."
+        theresults: "The web-based solution met all the assessment criteria of the project and as a result, I excelled on that module."
        
 
     },
@@ -67,7 +67,7 @@ export const CASESTUDYDATA = [
 
         thesolution: "I led the project from the initial stages of the application's development lifecycle through to deployment. I converted the design mock-ups into a web application that could be used by both existing and potential clients from all around the world.",
 
-        theresults: "As a result of this project that I led, a strong brand identity was created for Jaydalin Royal Limited. Additionally, the web application has enabled Jaydalin Royal Limited to reach a global audience with the potential of increasing their bottom line. Many comments have been received by the Jaydalin Royal Limited regarding the web application's design. The web application is also user friendly, responsive and has led to great customer satisfaction."
+        theresults: "As a result of this project that I led, a strong brand identity was created for Jaydalin Royal Limited. Additionally, the web application has enabled Jaydalin Royal Limited to reach a global audience with the potential of increasing their bottom line. Many comments have been received by Jaydalin Royal Limited regarding the web application's design. The web application is also user friendly, responsive and has led to great customer satisfaction."
      
 
     },
@@ -80,7 +80,7 @@ export const CASESTUDYDATA = [
 
         thesolution: "This is exactly what I did for 1st In View. I led the project from the initial stages of the website's development lifecycle through to deployment. Alongside other designers, I converted the design mock-ups into the desired website which met the needs of 1st In View.",
 
-        theresults: "The website met the needs 1st In View Systems and as a result, a lasting business relationship was created. The website is also user friendly, responsive and has led to great customer satisfaction."
+        theresults: "The website met the needs of 1st In View Systems and as a result, a lasting business relationship was created. The website is also user friendly, responsive and has led to great customer satisfaction."
       
 
     }

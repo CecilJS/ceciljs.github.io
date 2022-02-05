@@ -66,7 +66,7 @@ function About(){
                 </Typography>
                 <MyButton variant="contained" to="/projects"  component={Link} name="Projects"/>
             </Grid>          
-            <Grid item xs={10} sm={10} md={2} lg={2} xl={2} sx={{ ml: 5, mt: 5}}>
+            <Grid item xs={10} sm={10} md={2} lg={2} xl={2} sx={{ ml: 3, mt: 5}}>
             <MyAvatar/>
             </Grid>
         </AnimatedGrid>) : null)}

@@ -24,7 +24,7 @@ export default function Home (){
       <Typography variant='h5' sx={{ mt: 5}} >
       <Typewriter
       options={{
-         strings: [ 'Welcome to my page.', ' My name is Cecil.', 'And I am a software engineer.' , 'I am also a team player.'],
+         strings: [ 'Welcome to my page.', ' My name is Cecil.', 'I am a software engineer.', 'I am also a team player.'],
          autoStart: true,
          loop: true,
       }}
@@ -35,7 +35,7 @@ export default function Home (){
       </Typography>
       <MyButton variant="contained" to="/about"  component={Link} name="Read More"/>
       </Grid>
-      <Grid item xs={10} sm={10} md={5} lg={5} xl={5} sx={{ml: 5, mt: 5}}>
+      <Grid item xs={10} sm={10} md={5} lg={5} xl={5} sx={{ml: 3, mt: 8}}>
       <MyAvatar/>
       </Grid>
       <Grid item xs={1} sm={1} md={1} lg={1} xl={1}>
