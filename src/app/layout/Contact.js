@@ -32,7 +32,7 @@ function Contact(){
             <Grid item xs={1} sm={1} md={2} lg={2} xl={2}>
                 
             </Grid>
-            <Grid item xs={10} sm={10} md={8} lg={6} xl={6} >
+            <Grid item xs={10} sm={10} md={6} lg={6} xl={6} >
                 <Typography variant='h2' sx={{letterSpacing: 1, lineHeight: 1.5, color:'#CAA85D',  mt: 1}}>
                 Contact me
                 </Typography>

@@ -52,7 +52,7 @@ function About(){
                 created a professional development plan for myself and have stuck to it till this day. 
                 Although my path has not neccessarily been the most direct, I have learned a lot along
                 the way. I have learned to be patient, to be flexible, to be resilient
-                and these qualities really helps when debugging and troubleshooting.
+                and these qualities really help when I am debugging or refactoring my code.
                 </Typography> 
                 
                 <Typography variant='body1' sx={{letterSpacing: 1, lineHeight: 1.5, mt: 3}}>
