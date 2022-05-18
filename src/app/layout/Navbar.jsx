@@ -20,10 +20,9 @@ import ListItemText from '@mui/material/ListItemText';
 import MailIcon from '@mui/icons-material/Mail';
 import { FormControlLabel, Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
+import MuiAppBar from '@mui/material/AppBar';
 import MaterialUISwitch from '../components/MaterialUISwitch';
 import { drawerWidth, Main } from '../components/Main';
-
-import { AppBar } from '../components/AppBar';
 
 const primaryLink = [
   { title: 'Home', path: '/home' },
@@ -31,6 +30,23 @@ const primaryLink = [
   { title: 'Contact', path: '/contact' },
   { title: 'Projects', path: '/projects' },
 ];
+
+const AppBar = styled(MuiAppBar, {
+  shouldForwardProp: (prop) => prop !== 'open',
+})(({ theme, open }) => ({
+  transition: theme.transitions.create(['margin', 'width'], {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.leavingScreen,
+  }),
+  ...(open && {
+    width: `calc(100% - ${drawerWidth}px)`,
+    marginLeft: `${drawerWidth}px`,
+    transition: theme.transitions.create(['margin', 'width'], {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  }),
+}));
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',

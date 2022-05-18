@@ -1,37 +1,11 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx lint-staged
-
 echo '👷 Styling, Linting and testing the project project before committing'
 
-
-
-# Check tsconfig standards
-npm run check-format ||
-(
-    echo '🤢🤮🤢🤮 Its Pretty bad - Your styling looks disgusting. 🤢🤮🤢🤮
-            Prettier Check Failed. Run npm run format, add changes and try commit again.';
-    false;
-)
-
-# Check ESLint Standards
-npm run lint ||
-(
-        echo '😤🏀👋😤 ESLint has discovered some linting issues in the code, fix now! 😤🏀👋😤 
-                ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
-        false; 
-)
-
-# Check Prettier standards
-npm run format ||
-(
-    echo '🤡😂❌🤡 Failed Type check. 🤡😂❌🤡
-            Are you seriously trying to write that? Make the changes required above.'
-    false;
-
-)
-
+npx lint-staged
 
 # If everything passes... Now we can commit
 echo '✅✅✅✅ You win this time... I am committing this now. ✅✅✅✅'
+
+
