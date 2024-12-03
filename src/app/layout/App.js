@@ -7,6 +7,7 @@ import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
 import Projects from "./Projects";
+import Blog from "./Blog";
 import Privacy from "./Privacy";
 import Terms from "./Terms";
 import TenderCrown from "./TenderCrown";
@@ -21,10 +22,6 @@ import JaydalinRoyal from "./JaydalinRoyal";
 Art direction for landing page image:
 Change Icons for hamburger menu
 componentize the differet pages, i.e., develop a common view for each page for as long as possible
-
-
-
-
 
 */
 
@@ -51,6 +48,7 @@ function App() {
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route path="/projects" component={Projects} />
+        <Route path="/blog" component={Blog} />
         <Route path="/privacy" component={Privacy} />
         <Route path="/terms" component={Terms} />
         <Route path="/casestudy/tendercrown" component={TenderCrown} />

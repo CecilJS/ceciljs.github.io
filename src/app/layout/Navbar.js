@@ -35,6 +35,7 @@ const primaryLink = [
   { title: "About", path: "/about" },
   { title: "Contact", path: "/contact" },
   { title: "Projects", path: "/projects" },
+    { title: "Blog", path: "/blog" },
 ];
 
 
@@ -86,7 +87,7 @@ export default function Navbar(props) {
       <AppBar
         position="fixed"
         open={open}
-        sx={{ flexGrow: 1, bgcolor: "#CAA85D", textDecoration: "none" }}
+        sx={{ flexGrow: 1, bgcolor: "#CAA85B", textDecoration: "none" }}
       >
       
         <Toolbar>
