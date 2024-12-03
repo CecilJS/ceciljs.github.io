@@ -27,7 +27,7 @@ componentize the differet pages, i.e., develop a common view for each page for a
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-  const paletteType = darkMode ? "dark" : "light";
+  const paletteType = darkMode ? "light" : "dark";
   const theme = createTheme({
     palette: {
       mode: paletteType,

@@ -55,7 +55,7 @@ export default function Navbar(props) {
 
   // changing the text from dark to light and vice versa
   const [modeLabel, setmodeLabel] = useState(true);
-  const labelState = modeLabel ? {mode: 'Light Mode'} : {mode: 'Dark Mode'};
+  const labelState = modeLabel ? {mode: 'Dark Mode'} : {mode: 'Light Mode'};
    function handleChange(){
      setmodeLabel(!modeLabel);
  

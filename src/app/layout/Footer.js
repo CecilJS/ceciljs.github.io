@@ -1,62 +1,89 @@
 import React  from 'react'
-import Grid from '@mui/material/Grid';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import { Link } from "react-router-dom";
+import { Box, Container, Grid, Typography, Link, IconButton } from '@mui/material';
+import { GitHub, LinkedIn, Twitter } from '@mui/icons-material';
 
+const Footer = () => {
+    return (
+        <Box
+            component="footer"
+            sx={{
+                bgcolor: 'background.default', // Adapts to theme mode
+                color: 'text.primary',
+                py: 6,
+                borderTop: '1px solid',
+                borderColor: 'divider',
+            }}
+        >
+            <Container maxWidth="lg">
+                <Grid container spacing={4} justifyContent="space-between" alignItems="flex-start">
+                    {/* Logo or Brand */}
+                    <Grid item xs={12} sm={4}>
+                        <Typography variant="h6" gutterBottom>
+                            Fun Fact
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                           Currently, I work as a Senior Software Engineer with other very talented engineers at Ford.
+                            Who knows where I'll be working next? &#x1F609;
+                        </Typography>
+                    </Grid>
 
+                    {/* Navigation Links */}
+                    <Grid item xs={6} sm={4}>
+                        <Typography variant="h6" gutterBottom>
+                            Quick Links
+                        </Typography>
+                        <Box>
+                            <Link href="/" color="inherit" underline="hover" sx={{ display: 'block', mb: 1 }}>
+                                Home
+                            </Link>
+                            <Link href="/about" color="inherit" underline="hover" sx={{ display: 'block', mb: 1 }}>
+                                About
+                            </Link>
+                            <Link href="/contact" color="inherit" underline="hover" sx={{ display: 'block', mb: 1 }}>
+                                Contact
+                            </Link>
+                        </Box>
+                    </Grid>
 
-function Footer () {
-
-        const footerLinks = [
-                { title: "Terms", path: "/terms" },
-                { title: "Privacy Policy", path: "/privacy" }
-
-              ];
- 
-        return (
-           
-                <Grid container sx={{mt: 10}}>
-                        <Grid item xs={2} sm={2} md={2} lg={2} xl={2}>
-
-                        </Grid>
-                  <Grid item xs={12} sm={12} md={4} lg={4} xl={4} sx={{ mt: 15}}>
-                  <a href="https://github.com/CecilJS" target="_blank" rel="noopener noreferrer">
-                  <GitHubIcon sx={{ ml: 5, color: '#CAA85D'}} />
-                  </a>
-                  <a href="https://www.linkedin.com/in/itscecil/" target="_blank" rel="noopener noreferrer">
-                  <LinkedInIcon sx={{ ml: 5, color: '#CAA85D'}}/>
-                  </a>
-                
-                 <a href="https://twitter.com/cecil_js" target="_blank" rel="noopener noreferrer"> 
-                  <TwitterIcon sx={{ ml: 5, color: '#CAA85D'}}/>
-                 </a>
-                  </Grid>
-                  <Grid item xs={12} sm={12} md={4} lg={4} xl={4} sx={{ mt: 13}}>
-                  
-                  <List  sx={{ display: "flex"}}>
-                        {footerLinks.map((link, i) => (
-                                <ListItem key={i} 
-                                to={link.path}
-                                component={Link}
-                                sx={{ display: "flex", textDecoration: "none", color: '#CAA85D', fontWeight: 'bold'}}
-                                >
-                                {link.title}
-                                </ListItem>
-                                ))}
-                  </List>
-                  </Grid>
-                        <Grid item xs={2} sm={2} md={2} lg={2} xl={2}>
-
-                        </Grid>
+                    {/* Social Links */}
+                    <Grid item xs={6} sm={4}>
+                        <Typography variant="h6" gutterBottom>
+                            Connect with me
+                        </Typography>
+                        <Box sx={{ display: 'flex', gap: 2 }}>
+                            <IconButton
+                                href="https://github.com/CecilJS"
+                                target="_blank"
+                                rel="noopener"
+                                color="inherit"
+                            >
+                                <GitHub />
+                            </IconButton>
+                            <IconButton
+                                href="https://www.linkedin.com/in/itscecil/"
+                                target="_blank"
+                                rel="noopener"
+                                color="inherit"
+                            >
+                                <LinkedIn />
+                            </IconButton>
+                        </Box>
+                    </Grid>
                 </Grid>
-          
-        )
-    }
 
-
+                {/* Bottom Bar */}
+                <Box
+                    mt={4}
+                    textAlign="center"
+                    sx={{ borderTop: '1px solid', borderColor: 'divider', pt: 2 }}
+                >
+                    <Typography variant="body2" color="text.secondary">
+                        &copy; {new Date().getFullYear()} - Build with ❤️ by Cecil Jones. All rights reserved.
+                    </Typography>
+                </Box>
+            </Container>
+        </Box>
+    );
+};
 
 export default Footer;
