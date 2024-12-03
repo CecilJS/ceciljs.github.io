@@ -1,6 +1,6 @@
 import React  from 'react'
 import { Box, Container, Grid, Typography, Link, IconButton } from '@mui/material';
-import { GitHub, LinkedIn, Twitter } from '@mui/icons-material';
+import { GitHub, LinkedIn } from '@mui/icons-material';
 
 const Footer = () => {
     return (
@@ -78,7 +78,7 @@ const Footer = () => {
                     sx={{ borderTop: '1px solid', borderColor: 'divider', pt: 2 }}
                 >
                     <Typography variant="body2" color="text.secondary">
-                        &copy; {new Date().getFullYear()} - Build with ❤️ by Cecil Jones. All rights reserved.
+                        &copy; {new Date().getFullYear()} - Built with ❤️ by Cecil Jones. All rights reserved.
                     </Typography>
                 </Box>
             </Container>
