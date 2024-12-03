@@ -31,147 +31,147 @@ import { Link } from "react-router-dom";
 
 
 const primaryLink = [
-  { title: "Home", path: "/home" },
-  { title: "About", path: "/about" },
-  { title: "Contact", path: "/contact" },
-  { title: "Projects", path: "/projects" },
+    { title: "Home", path: "/home" },
+    { title: "About", path: "/about" },
+    { title: "Contact", path: "/contact" },
+    { title: "Projects", path: "/projects" },
 ];
 
 
 const DrawerHeader = styled("div")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
-  ...theme.mixins.toolbar,
-  justifyContent: "flex-end"
+    display: "flex",
+    alignItems: "center",
+    padding: theme.spacing(0, 1),
+    // necessary for content to be below app bar
+    ...theme.mixins.toolbar,
+    justifyContent: "flex-end"
 }));
 
 export default function Navbar(props) {
-  const theme = useTheme();
-  const [open, setOpen] = useState(false);
-  const [innerWidth, setInnerWidth] = useState({ width: window.innerWidth});
+    const theme = useTheme();
+    const [open, setOpen] = useState(false);
+    const [innerWidth, setInnerWidth] = useState({ width: window.innerWidth});
 
-  // changing the text from dark to light and vice versa
-  const [modeLabel, setmodeLabel] = useState(true);
-  const labelState = modeLabel ? {mode: 'Light Mode'} : {mode: 'Dark Mode'};
-   function handleChange(){
-     setmodeLabel(!modeLabel);
- 
-   }
+    // changing the text from dark to light and vice versa
+    const [modeLabel, setmodeLabel] = useState(true);
+    const labelState = modeLabel ? {mode: 'Dark Mode'} : {mode: 'Light Mode'};
+    function handleChange(){
+        setmodeLabel(!modeLabel);
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
+    }
 
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
+    const handleDrawerOpen = () => {
+        setOpen(true);
+    };
 
-  // Listening to the window size and changing the state of the navbar
-  useEffect(() => {
-    function handleResize() {
-      setInnerWidth({
-        width: window.innerWidth
-          })   
-       } 
-    window.addEventListener('resize', handleResize);
-    return _ => {window.removeEventListener('resize', handleResize)};
-  })
+    const handleDrawerClose = () => {
+        setOpen(false);
+    };
 
-  return (
-    <Box sx={{ display: "flex" }}>
-      <CssBaseline />
-      
-      <AppBar
-        position="fixed"
-        open={open}
-        sx={{ flexGrow: 1, bgcolor: "#CAA85D", textDecoration: "none" }}
-      >
-      
-        <Toolbar>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              onClick={handleDrawerOpen}
-              edge="start"
-              sx={{ mr: 2, ...(open && { display: "none" }) }}
+    // Listening to the window size and changing the state of the navbar
+    useEffect(() => {
+        function handleResize() {
+            setInnerWidth({
+                width: window.innerWidth
+            })
+        }
+        window.addEventListener('resize', handleResize);
+        return _ => {window.removeEventListener('resize', handleResize)};
+    })
+
+    return (
+        <Box sx={{ display: "flex" }}>
+            <CssBaseline />
+
+            <AppBar
+                position="fixed"
+                open={open}
+                sx={{ flexGrow: 1, bgcolor: "#CAA85B", textDecoration: "none" }}
             >
-              <MenuIcon />
-            </IconButton>
-            <Grid container>
-            <Typography variant="h6" noWrap to="/" component={Link} sx={{textDecoration: "none", color: 'inherit'}}>
-              Cecil
-            </Typography>
-            </Grid>
-            <Grid container spacing={0} direction="row" alignItems="center" justifyContent="center">
-            { // implementing the useEffect hook to hide the navitems on mobile
-              (innerWidth.width < 800) ? null : (
-                <List sx={{ display: "flex" }}>
-              {primaryLink.map(({ title, path }) => (
-                <ListItem
-                  key={path}
-                  sx={{ color: "inherit", typography: "h7" }}
-                  to={path}
-                  component={Link}
-                  onClick={handleDrawerClose}
-                >
-                  {title.charAt(0).toUpperCase() + title.slice(1)}
-                </ListItem>
-              ))}
-            </List>
-              )  
-            }
-           
-        </Grid>
-        <Grid container justifyContent="flex-end" >
-          <FormControlLabel
-            control={<MaterialUISwitch sx={{ m: 1 }} checked={props.darkMode}  onChange={props.handleThemeChange}/>}
-            label={labelState.mode}
-            onClick={handleChange}
-           />
-        </Grid>
-        </Toolbar>
-        
-      </AppBar>
-      
-      <Drawer
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          "& .MuiDrawer-paper": {
-            width: drawerWidth,
-            boxSizing: "border-box"
-          }
-        }}
-        variant="persistent"
-        anchor="left"
-        open={open}
-      >
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === "ltr" ? (
-              <ChevronLeftIcon />
-            ) : (
-              <ChevronRightIcon />
-            )}
-          </IconButton>
-        </DrawerHeader>
-        <Divider />
-        <List>
-          {primaryLink.map((path, index) => (
-            <ListItem button key={index} to={path.path} component={Link} onClick={handleDrawerClose} >
-              <ListItemIcon>
-                {path.title === "Home" ? <HomeIcon /> : path.title === "About" ? <PersonIcon /> : path.title === "Projects" ? <WorkIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={path.title} />
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
-      <Main open={open}>
-        <DrawerHeader />
-      </Main>
-    </Box>
-  );
+
+                <Toolbar>
+                    <IconButton
+                        color="inherit"
+                        aria-label="open drawer"
+                        onClick={handleDrawerOpen}
+                        edge="start"
+                        sx={{ mr: 2, ...(open && { display: "none" }) }}
+                    >
+                        <MenuIcon />
+                    </IconButton>
+                    <Grid container>
+                        <Typography variant="h6" noWrap to="/" component={Link} sx={{textDecoration: "none", color: 'inherit'}}>
+                            Cecil
+                        </Typography>
+                    </Grid>
+                    <Grid container spacing={0} direction="row" alignItems="center" justifyContent="center">
+                        { // implementing the useEffect hook to hide the navitems on mobile
+                            (innerWidth.width < 800) ? null : (
+                                <List sx={{ display: "flex" }}>
+                                    {primaryLink.map(({ title, path }) => (
+                                        <ListItem
+                                            key={path}
+                                            sx={{ color: "inherit", typography: "h7" }}
+                                            to={path}
+                                            component={Link}
+                                            onClick={handleDrawerClose}
+                                        >
+                                            {title.charAt(0).toUpperCase() + title.slice(1)}
+                                        </ListItem>
+                                    ))}
+                                </List>
+                            )
+                        }
+
+                    </Grid>
+                    <Grid container justifyContent="flex-end" >
+                        <FormControlLabel
+                            control={<MaterialUISwitch sx={{ m: 1 }} checked={props.darkMode}  onChange={props.handleThemeChange}/>}
+                            label={labelState.mode}
+                            onClick={handleChange}
+                        />
+                    </Grid>
+                </Toolbar>
+
+            </AppBar>
+
+            <Drawer
+                sx={{
+                    width: drawerWidth,
+                    flexShrink: 0,
+                    "& .MuiDrawer-paper": {
+                        width: drawerWidth,
+                        boxSizing: "border-box"
+                    }
+                }}
+                variant="persistent"
+                anchor="left"
+                open={open}
+            >
+                <DrawerHeader>
+                    <IconButton onClick={handleDrawerClose}>
+                        {theme.direction === "ltr" ? (
+                            <ChevronLeftIcon />
+                        ) : (
+                            <ChevronRightIcon />
+                        )}
+                    </IconButton>
+                </DrawerHeader>
+                <Divider />
+                <List>
+                    {primaryLink.map((path, index) => (
+                        <ListItem button key={index} to={path.path} component={Link} onClick={handleDrawerClose} >
+                            <ListItemIcon>
+                                {path.title === "Home" ? <HomeIcon /> : path.title === "About" ? <PersonIcon /> : path.title === "Projects" ? <WorkIcon /> : <MailIcon />}
+                            </ListItemIcon>
+                            <ListItemText primary={path.title} />
+                        </ListItem>
+                    ))}
+                </List>
+            </Drawer>
+            <Main open={open}>
+                <DrawerHeader />
+            </Main>
+        </Box>
+    );
 }
