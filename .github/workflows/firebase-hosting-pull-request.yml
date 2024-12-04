@@ -14,6 +14,7 @@ jobs:
           node-version: 14.17.3
       - run: npm install
       - run: npm run build
+      - run: firebase use --project staging-cl
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
