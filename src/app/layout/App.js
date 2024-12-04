@@ -22,10 +22,6 @@ Art direction for landing page image:
 Change Icons for hamburger menu
 componentize the differet pages, i.e., develop a common view for each page for as long as possible
 
-
-
-
-
 */
 
 function App() {

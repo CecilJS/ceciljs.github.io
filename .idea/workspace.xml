@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="371f1ef8-b71d-416b-8e1b-3a72a09a5218" name="Changes" comment="" />
+    <list default="true" id="371f1ef8-b71d-416b-8e1b-3a72a09a5218" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/firebase-hosting-pull-request.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/firebase-hosting-pull-request.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/App.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,7 +78,8 @@
       <workItem from="1733180073112" duration="9387000" />
       <workItem from="1733218092605" duration="15859000" />
       <workItem from="1733237077512" duration="2631000" />
-      <workItem from="1733247118033" duration="2341000" />
+      <workItem from="1733247118033" duration="2680000" />
+      <workItem from="1733350618066" duration="3096000" />
     </task>
     <servers />
   </component>
