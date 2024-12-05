@@ -3,12 +3,7 @@ import CaseStudyTitle from "../components/CaseStudyTitle";
 import {CASESTUDYDATA} from "../api/DATA"
 
 
-
-
 function TheTalkative(){
-    
-
-
     return (
        <>
         <CaseStudyTitle/>
