@@ -1,0 +1,52 @@
+[debug] [2024-12-05T02:31:05.391Z] ----------------------------------------------------------------------
+[debug] [2024-12-05T02:31:05.399Z] Command:       C:\Users\Dewdr\.nvm\versions\node\v18.17.0\bin\node.exe C:\Users\Dewdr\.nvm\versions\node\v18.17.0\bin\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2024-12-05T02:31:05.401Z] CLI Version:   13.28.0
+[debug] [2024-12-05T02:31:05.402Z] Platform:      win32
+[debug] [2024-12-05T02:31:05.403Z] Node Version:  v18.17.0
+[debug] [2024-12-05T02:31:05.422Z] Time:          Thu Dec 05 2024 02:31:05 GMT+0000 (Greenwich Mean Time)
+[debug] [2024-12-05T02:31:05.423Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-12-05T02:31:05.957Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-05T02:31:05.959Z] > authorizing via signed-in user (blueblack.cj67@gmail.com)
+[debug] [2024-12-05T02:31:05.960Z] [iam] checking project staging-cl for permissions ["firebase.projects.get"]
+[debug] [2024-12-05T02:31:05.963Z] Checked if tokens are valid: false, expires at: 1733366479250
+[debug] [2024-12-05T02:31:05.964Z] Checked if tokens are valid: false, expires at: 1733366479250
+[debug] [2024-12-05T02:31:05.965Z] > refreshing access token with scopes: []
+[debug] [2024-12-05T02:31:05.970Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-12-05T02:31:05.970Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-12-05T02:31:06.116Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-12-05T02:31:06.116Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-12-05T02:31:06.150Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/staging-cl:testIamPermissions [none]
+[debug] [2024-12-05T02:31:06.150Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/staging-cl:testIamPermissions x-goog-quota-user=projects/staging-cl
+[debug] [2024-12-05T02:31:06.150Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/staging-cl:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-12-05T02:31:06.768Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/staging-cl:testIamPermissions 200
+[debug] [2024-12-05T02:31:06.768Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/staging-cl:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-12-05T02:31:06.769Z] Checked if tokens are valid: true, expires at: 1733369465116
+[debug] [2024-12-05T02:31:06.770Z] Checked if tokens are valid: true, expires at: 1733369465116
+[debug] [2024-12-05T02:31:06.770Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/staging-cl [none]
+[debug] [2024-12-05T02:31:07.416Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/staging-cl 200
+[debug] [2024-12-05T02:31:07.416Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/staging-cl {"projectNumber":"283527579479","projectId":"staging-cl","lifecycleState":"ACTIVE","name":"staging-cl","labels":{"firebase":"enabled"},"createTime":"2024-12-04T22:29:42.071091Z"}
+[info] 
+[info] === Serving from 'C:\Users\Dewdr\Desktop\ceciljs.github.io'...
+[info] 
+[debug] [2024-12-05T02:31:07.437Z] Checked if tokens are valid: true, expires at: 1733369465116
+[debug] [2024-12-05T02:31:07.437Z] Checked if tokens are valid: true, expires at: 1733369465116
+[debug] [2024-12-05T02:31:07.441Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/staging-cl/sites 
+[debug] [2024-12-05T02:31:08.584Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/staging-cl/sites 200
+[debug] [2024-12-05T02:31:08.584Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/staging-cl/sites {"sites":[{"name":"projects/staging-cl/sites/staging-cl","defaultUrl":"https://staging-cl.web.app","appId":"1:283527579479:web:934516a83fd66aaed46012","type":"DEFAULT_SITE"}]}
+[debug] [2024-12-05T02:31:08.585Z] Checked if tokens are valid: true, expires at: 1733369465116
+[debug] [2024-12-05T02:31:08.585Z] Checked if tokens are valid: true, expires at: 1733369465116
+[debug] [2024-12-05T02:31:08.585Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/staging-cl/webApps/1:283527579479:web:934516a83fd66aaed46012/config [none]
+[debug] [2024-12-05T02:31:09.218Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/staging-cl/webApps/1:283527579479:web:934516a83fd66aaed46012/config 200
+[debug] [2024-12-05T02:31:09.218Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/staging-cl/webApps/1:283527579479:web:934516a83fd66aaed46012/config {"projectId":"staging-cl","appId":"1:283527579479:web:934516a83fd66aaed46012","storageBucket":"staging-cl.firebasestorage.app","apiKey":"AIzaSyANcINjJMQvpD7z_gcSOTeZWmdGxrMiKww","authDomain":"staging-cl.firebaseapp.com","messagingSenderId":"283527579479","measurementId":"G-8GLCLDDJQ9"}
+[debug] [2024-12-05T02:31:09.228Z] Checked if tokens are valid: true, expires at: 1733369465116
+[debug] [2024-12-05T02:31:09.228Z] Checked if tokens are valid: true, expires at: 1733369465116
+[debug] [2024-12-05T02:31:09.229Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/staging-cl [none]
+[debug] [2024-12-05T02:31:09.479Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/staging-cl 200
+[debug] [2024-12-05T02:31:09.479Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/staging-cl {"projectId":"staging-cl","projectNumber":"283527579479","displayName":"staging-cl","name":"projects/staging-cl","resources":{"hostingSite":"staging-cl"},"state":"ACTIVE","etag":"1_54817bda-afb0-4953-8a00-4e51927bfe32"}
+[debug] [2024-12-05T02:31:09.481Z] Specified "public" directory "build" does not exist; Deploy to Hosting site "staging-cl" may fail or be empty.
+[info] i  hosting[staging-cl]: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] +  hosting[staging-cl]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: ::1 - - [05/Dec/2024:02:32:47 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [05/Dec/2024:02:32:47 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0\""}}
+[info] i  hosting: ::1 - - [05/Dec/2024:02:32:55 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [05/Dec/2024:02:32:55 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0\""}}
+[info] i  hosting: ::1 - - [05/Dec/2024:02:33:25 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [05/Dec/2024:02:33:25 +0000] \"GET / HTTP/1.1\" 404 139 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0\""}}

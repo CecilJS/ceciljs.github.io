@@ -60,7 +60,7 @@ const Footer = () => {
                                 <GitHub />
                             </IconButton>
                             <IconButton
-                                href="https://www.linkedin.com/in/itscecil/"
+                                href="https://www.linkedin.com/in/ceciljs/"
                                 target="_blank"
                                 rel="noopener"
                                 color="inherit"
