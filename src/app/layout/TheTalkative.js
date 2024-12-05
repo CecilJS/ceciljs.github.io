@@ -2,6 +2,7 @@ import ProjectDetails from "../components/ProjectDetails"
 import CaseStudyTitle from "../components/CaseStudyTitle";
 import {CASESTUDYDATA} from "../api/DATA"
 
+
 function TheTalkative(){
     return (
        <>
