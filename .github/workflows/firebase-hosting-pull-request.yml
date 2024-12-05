@@ -12,12 +12,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20.5.0
-      - run: npm install -g firebase-tools
       - run: npm install
       - run: npm run build
-      - run: firebase use --project staging-cl
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_STAGING_CL }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_STAGING }}'
           projectId: staging-cl
